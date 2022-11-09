@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Naija Intro Page</title>
+	<link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="animate.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" orientation="landscape">
+
+     <style>
+        
+        
+        @font-face {
+            font-family: newFont;
+            src: url(poppins.ttf);
+        }
+        *{
+            font-family: newFont;
+        }
+        canvas {
+            position: absolute;
+            background: black;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+
+        body{
+        	display:flex;
+        	justify-content: center;
+        	align-items:center;
+        	color:white;
+        }
+
+
+        .textSlide{
+        	position: relative;
+        	font-size:20px;
+        	display: flex;
+        	align-items: center;
+        	justify-content: center;
+        	text-align: center;
+        	flex-direction: column;
+        }
+
+        .loader{
+        	display: none;
+        	position: relative;
+        	justify-content: center;
+        	align-items: center;
+        	height:20px;
+        	width:20px;
+        	border-radius: 50%;
+        	border:2px solid dodgerblue;
+        	border-top:2px solid white;
+        	text-align: center;
+        	
+        	padding: 10px;
+        	animation:spin 1s linear infinite;
+        }
+        .swal-container{
+            background:#212529;
+            color:white;
+        }
+
+        .swal2-modal,.swal-container,.swal2-toast,.swal2-toast-shown{
+            background:#212529;
+            color:white;
+        }
+
+        .swal2-title,.swal2-html-container{
+            color:white;
+        }
+
+        #canvas{
+            width: 100%;
+            height: 100%;
+        }
+
+        @keyframes spin{
+        	from{
+        		transform:translateY(200%) rotate(0deg);
+
+        	}
+        	to{
+        		transform:translateY(200%) rotate(360deg);
+        	}
+        }
+
+
+
+
+     </style>
+</head>
+<body>
+<canvas id="canvas" class="clickable"></canvas>
+<br/><br/>
+<div class="container " id="container">
+
+<div class="textSlide clickable text-capitalize my-5" id="textSlide">
+	
+
+    <h1 class="h1 animate__animated animate__bounceIn">9ja flappy  🐓</h1>
+	<br/><br/>
+    <div id="birdFlying" class="my-md-3 my-2 animate__animated animate__infinite animate__slideInUp">
+
+        <img src="demo_f1.png" id="bird" width="40" height="35">
+
+    </div>
+    <div class="loader m-auto" id="loader">
+</div>
+<br/><br/>
+	
+    
+
+		<br/><br/>
+<button class="btn btn-primary clickable animate__animated animate__bounce" id="proceed">Play 👆</button>
+
+</div>
+</div>
+
+<script>
+
+const buttonsClickable = document.getElementsByClassName("clickable");
+const buttonSound = new Audio();
+buttonSound.src = "click.wav";
+
+
+const bird = document.getElementById("bird");
+
+
+const birdArray = [
+    
+    "demo_f1",
+    "demo_f2",
+    "demo_f3",
+];
+const png  = ".png";
+let birdFrame = 0;
+const changeFrame = () =>{
+    
+    bird.src = birdArray[birdFrame] + png;
+
+    birdFrame ++;
+
+    if(birdFrame == 3){
+        birdFrame = 0;
+    }
+}
+
+
+
+setInterval(()=>{
+
+    changeFrame();
+
+},170);
+//create a function to return a random number
+function randomNumber(max, min) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+//vrate a varible to return a number from 3seconds to 1second
+let randomTimer=randomNumber(3000,1000);
+
+//loop through the buttons
+
+for (let i = 0; i < buttonsClickable.length; i++) {
+    //check if any of the buttons with clickable classname was clicked
+    buttonsClickable[i].addEventListener("click", () => {
+        //play the clickable buttons sound if the player clicks on any of the clickable button object
+        buttonSound.play();
+    });
+}
+
+proceed.addEventListener("click",()=>{
+	birdFlying.style.display="none";
+	loader.style.display="flex";
+
+	setTimeout(()=>{
+		//navigate to the game page
+		location.href="indexPage.html";
+	},randomTimer);
+})
+</script>
+</body>
+<script src="about.js"></script>
+</html>

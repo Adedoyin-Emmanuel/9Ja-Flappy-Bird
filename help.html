@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Game Help</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.6, maximum-scale=0.6, user-scalable=no" orientation="landscape">
+    <style>
+        .gameInfo {
+            font-size: 18px;
+        }
+        /*     body{
+            overflow: scroll;
+        }*/
+        
+        .footer {
+            overflow: hidden !important;
+            top: 0;
+            bottom: 0;
+        }
+        
+        .header {
+            box-shadow: 1px 1px 5px black;
+            position: fixed;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            display: inline;
+        }
+        
+        #logo:hover {
+            cursor: pointer;
+        }
+        
+        .gameTitle {
+            text-shadow: 1px 1px 2px black;
+        }
+        
+        .modeToggle {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            transition: .4s;
+        }
+        
+        .modeToggle:hover {
+            cursor: pointer;
+            opacity: .7;
+            box-shadow: 1px 1px 100px dodgerblue, 1px 1px 100px dodgerblue, 2px 1px 100px dodgerblue, 1px 1px 100px dodgerblue;
+        }
+        
+        #modeToggleBtn {
+            cursor: pointer;
+        }
+        
+        .mode {
+            float: right;
+            right: 0;
+            position: absolute;
+            margin: 20px;
+        }
+
+        #col1{
+            display: flex;
+            margin: 0;
+            justify-content:space-evenly;
+            align-items:flex-end;
+            flex-direction: row;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header class="header bg-primary text-capitalize m-auto p-3" id="header">
+        <img src="f1.png" class="logo" id="logo" />
+        <br/>
+        <h3 class="text-left gameTitle" style="color:white;" id="gameTitle">naija flappy bird game</h3>
+        <!--the image for the game-->
+        <img height="35" width="35" id="modeToggleBtn" title="Click To Toggle Mode" class="clickable mode" src="dayMode.png">
+
+    </header>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <!--parent class div-->
+    <div class="container m-auto p-3">
+
+        <h3 class="text-center text-capitalize">naija flappy bird game documentation</h3>
+        <div class="gameInfo text-capitalize">
+            the niger flappy bird game, is an intresting game to play... it consists of a player which is a bird, the player has to dodge the obstacles and planes to survive..
+
+        </div>
+        <br/>
+
+        <h3 class="text-center text-capitalize">controls</h3>
+
+        <div class="gameInfo text-capitalize">
+            the player can be controlled using the following ways;
+
+            <br/>
+            <ul class="list text-capitalize">
+                <li>Keyboard control</li>
+                <li>Game Pad</li>
+                <li>Touch Pad/Screen</li>
+            </ul>
+
+            <br/>
+            <h4 class="text-capitalize text-left">Keyboard Control</h4>
+            The player is controlled by pressing the space bar on the keyboard to move the player upward..<b>NOTE:</b> the keyboard control is for the desktop version..
+
+            <br/><br/>
+
+
+            <h4 class="text-capitalize text-left">Game Pad Control</h4>
+
+            The throttle or the game pad axis is used to control the player with the game pad.. the upward axis/throttle moves the player up and the downward throttle moves the player down... <b>NOTE:</b> any of the two game pad axis can be used for the control on the desktop game version.
+
+            <br/><br/>
+
+
+
+            <h4 class="text-capitalize text-left">Touch Screen Control</h4>
+
+            The throttle or the game pad axis is used to control the player with the game pad.. the upward axis/throttle moves the player up and the downward throttle moves the player down... <b>NOTE:</b> The touch screen control is for the mobile application.
+
+            <br/><br/>
+            <h4 class="text-capitalize text-center">How to play</h4>
+
+            the game is played by avoiding the obstacles and also the planes, the game gets more difficult as the score increases or as long as you are still playing the game.. avoiding falling to the ground because that's game <b>OVER</b> also, you can
+            take part in the quick game to play any mode of your choice, there are also daily challenges to try out, they are more challenging...
+
+
+            <br/><br/>
+
+            <h4 class="text-capitalize text-left">High Score</h4>
+
+            the game comes with an high score module which keeps track of the user's highscore, challenge your self and beat your highscore...., you can also post your highscore on any social media platform which includes Facebook or Twitter.. the highscore posting plaform,is on the game menu. You can also reset your highcore in the game menu
+
+            <br/><br/>
+            <button class="btn btn-success" id="highScoreGUI">Check High Score</button>
+
+            <br/><br/>
+
+
+            <h4 class="text-capitalize text-left">Night Mode And Day Mode</h4>
+
+            
+            the game is built with both night mode and day mode, the user can choose either modes to play depending on their preference. you can click the <b>EA</b> button on the game GUI to change or toggle the <b>Night Mode Or Day Mode</b>. Also, in the game you can click the <b>Quick Play </b> button to choose between day mode and night mode...  also, the <b>Quick Game</b> mode helps users to select the kind of world they want to play... <b>The Game Sounds</b> are majorly electronic music that are pleasing to the ear... an headphone or ear pod is recommended for better user experience...  
+
+            <br/><br/><br/>
+
+
+
+            <h4 class="text-capitalize text-left">Latest Updates</h4>
+
+            
+            this update includes play/pause module. (ie) the player can now pause and play the game. also the game has <b>Delta Timing</b> this feature makes the game run at the same screen rate on both old and new powerful devices.. <b>NOTE:</b> we reveived some complaints about download issues so we hosted our game on another server.. <a href="www.itch.io">Itch.Io</a> which would help us track our downloads well.. We would launch on play store soon stay tuned....
+            <br/><br/>
+            <h4 class="text-capitalize text-left">Overall Updates</h4>
+            <ul class="list  text-capitalize">
+
+            <li>Improved Performance</li>
+            <li>Pause/Play Module</li>
+            <li>Delta Timing</li>
+            <li>Frantic Levels</li>
+            <li>Easier Download Access</li>
+
+            </ul>
+            <br/><br/><br/>
+
+            
+
+
+            <h4 class="text-capitalize text-left">Share 9Ja Flappy Bird</h4>
+
+            
+            Share This Game To Your Friends And Let Us Know Their Review About The Game... Click The Button To Share The Game. You could also swipe left to access the game panel, choose share and click the platform you want to share the game to...
+
+            <br/><br/>
+
+            <button class="btn btn-danger" id="shareGameBtn">Copy Game Link</button>
+
+            <br/><br/>
+
+            <h4 class="text-capitalize text-left">Developer's Credit</h4>
+            This game was developed by Adedoyin Emmanuel Adeniyi, A fullstack developer, web designer and a game developer.. contact him with phonenumber: 07061620301, g-mail: adedoyine535@gmail.com, website: www.github.com/Adedoyin-Emmanuel. View These Platforms, Like And Support My Work... You can also donate to  onus the game server <a href="www.itch.io">Itch.io</a> this would help to create better games and also give more motivation...
+            <br/><br/>
+            <div class="col " id=col1>
+                <button class="btn btn-secondary row" id="githubView">View On Github</button>
+
+                <button class="btn btn-danger row"id="linkedInView">View On LinkedIn</button>
+
+                <button class="btn btn-primary row" id="twitterView">View On Twitter</button>
+
+                <button class="btn btn-warning row" id="facebookView">View On Facebook</button>
+
+                <button class="btn btn-success row" id="tiktokView">View On TikTok</button>
+
+                <button class="btn btn-secondary row" id="instagramView">View On Instagram</button>
+            </div>
+            <br/><br/>
+
+            <h4 class="text-capitalize text-left">Desktop Application</h4>
+
+            The desktop application is avaliable on <a href="www.github.com">GitHub</a>, although, it is the development version. we would launch the full version very soon, we would also launch it on another game server <a href="www.itch.io"> Itch.com </a>stay tuned.. get the dvelopment version on github
+
+            <br/><br/>
+
+            <button class="btn btn-success" id="githubLink">View On Github</button>
+
+            <br/>
+        </div>
+
+<hr id="hr">
+        <br/><br/>
+        <button class="btn btn-primary" id="play">Play Game..</button>
+    </div>
+    <br/>
+
+    <footer class="footer row bg-primary m-auto" id="footer">
+        <div class="text-capitalize notice col p-3  text-center" style="color:white; overflow-x:hidden;">I assure you that you wouldn't face any bugs using my software but if in case, contact me @ 07061620301
+
+            <div id="copyRight">&copy; EmmySoft Games </div>
+        </div>
+
+
+
+    </footer>
+</body>
+<script src="sweetAlert2.min.js"></script>
+<script>
+    let date = new Date();
+    let currentYear = date.getFullYear();
+    const defaultYear = "2020";
+    let toggler = false;
+    copyRight.innerHTML = `&copy; EmmySoft Games 2020 - ${currentYear}`;
+
+
+    //check if the play button was clicked
+    play.addEventListener("click", () => {
+        location.href = "indexPage.html";
+    });
+
+
+
+
+    //check if the github button was clicked
+    githubLink.addEventListener("click",()=>{
+        //naviage the user to the github page
+        window.open("www.github.com/Adedoyin-Emmanuel");
+    });
+
+
+    highScoreGUI.addEventListener("click",()=>{
+        location.href="indexPage.html";
+    });
+
+
+    twitterView.addEventListener("click",()=>{
+        //navigate the user to my twitter account
+        location.href="https://twitter.com/Emmysoft_Tm?t=_14bntCfOv2cFvoV6hHdug&s=09";
+    });
+
+
+    facebookView.addEventListener("click",()=>{
+        //naviage the user to my facebook account
+        location.href="https://www.facebook.com/adedoyin.emmanuel.180";
+    });
+
+
+    linkedInView.addEventListener("click",()=>{
+        //naviagte the user to my linkedin account.
+        location.href="https://www.linkedin.com/adedoyin-emmanuel-5a0a71219";
+    });
+
+    instagramView.addEventListener("click",()=>{
+        //navigate the user to my instagram account
+        swal.fire({
+            title:"Coming Soon",
+            text:"We Would Update This Module In The Next Update",
+            icon:"info",
+            footer:"Powered By EmmySoft Productions EA"+"<sup>TM</sup>",
+                allowOutsideClick:false,
+                showCancelButton:true,
+                showConfirmButton:true
+
+        })
+    });
+
+
+    tiktokView.addEventListener("click",()=>{
+        //navigate the user to my tiktok account
+        swal.fire({
+            title:"Coming Soon",
+            text:"We Would Update This Module In The Next Update",
+            icon:"info",
+            footer:"Powered By EmmySoft Productions EA"+"<sup>TM</sup>",
+                allowOutsideClick:false,
+                showCancelButton:true,
+                showConfirmButton:true
+
+        })
+    });
+
+
+
+    //create a function to copy the link and save on clipboard
+
+    const GAME_LINK="https://appsgeyser.com/15331408/9Ja-Flappy-Bird";
+
+    shareGameBtn.addEventListener("click",()=>{
+       // console.log(navigator.clipboard);
+       navigator.clipboard.writeText(GAME_LINK);
+       setTimeout(()=>{
+            swal.fire({
+                title:"Link Copied Successfully",
+                text:"The Link Has Been Successfully Copied To The ClipBoard, Click Share To Your Fiends On Various Social Media Paltforms.",
+                icon:"success",
+                footer:"Powered By EmmySoft Productions EA"+"<sup>TM</sup>",
+                allowOutsideClick:false,
+                showCancelButton:true,
+                showConfirmButton:true,
+                confirmButtonColor:"dodgerblue",
+                showCloseButton:true,
+                confirmButtonText:"Share..",
+                cancelButtonText:"Cancel",
+                cancelButtonColor:"tomato"
+
+            }).then((willProceed)=>{
+                if(willProceed.isConfirmed){
+                    swal.fire({
+                        title:"Share",
+                        text:"Choose The Social Media To Share Game Link To...",
+                        icon:"question",
+                        footer:"Powered By EmmySoft Productions EA"+"<sup>TM</sup>",
+                         allowOutsideClick:false,
+                         showCancelButton:true,
+                         showCloseButton:false,
+                         showConfirmButton:true,
+                         confirmButtonColor:"dodgerblue",
+                         cancelButtonText:"Twitter",
+                         showDenyButton:true,
+                         confirmButtonText:"Facebook",
+                         denyButtonColor:"tomato",
+                         cancelButtonColor:"teal",
+                         denyButtonText:"LinkedIn",
+
+
+                    }).then((willProceed)=>{
+                        if(willProceed.isConfirmed){
+                            //navigate the user to facebook
+                            location.href="www.facebook.com";
+                        }
+                        if(willProceed.isDenied){
+                            //navigate the user to linkedin
+                            location.href="www.linkedin.com";
+
+                        }
+                        if(willProceed.isDismissed){
+                            location.href="www.twitter.com";
+
+                        }
+                    })
+                }
+            })
+       })
+    })
+
+
+    //create a function to toggle the mode
+    function toggleMode(mode) {
+    
+        switch (mode) {
+            case "dayMode":
+                modeToggleBtn.src = "dayMode.png";
+                //header.addClass("bg-primary");
+                //footer.addClass("bg-primary");
+                document.body.style.color = "black";
+                document.body.style.background = "white";
+                break;
+            case "nightMode":
+                modeToggleBtn.src = "nightMode.png";
+                //header.addClass("bg-secondary");
+                //footer.addClass("bg-secondary"); 
+                document.body.style.color = "white";
+                document.body.style.background = "black";
+
+                break;
+        }
+    }
+
+    //check if the toggle mode btn was clicked
+    modeToggleBtn.addEventListener("click", () => {
+        if (toggler == true) {
+            toggleMode("dayMode");
+            toggler = false;
+        } else {
+            toggleMode("nightMode");
+            toggler = true;
+        }
+    });
+</script>
+
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Game Documentation</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css" />
+     <meta name="viewport" content="width=device-width, initial-scale=0.6, maximum-scale=0.6, user-scalable=no" orientation="landscape">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        canvas {
+            position: absolute;
+            background: black;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .slider {
+            color: white;
+            margin: auto;
+            padding: 10px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transform: translateY(50%);
+            animation: slide 15s linear infinite;
+        }
+        
+        h5 {
+            font-size: 20px;
+            font-weight: normal;
+        }
+        
+        .homeBtn,
+        .helpBtn {
+            position: absolute;
+            display: flex;
+            bottom: 0;
+            margin: 20px;
+        }
+        
+        .homeBtn {
+            left: 0;
+            right: 40;
+            float: left;
+        }
+        
+        .helpBtn {
+            right: 0;
+        }
+        
+        @keyframes slide {
+            from {
+                transform: translateY(800px);
+            }
+            to {
+                transform: translateY(-400px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="canvas"></canvas>
+    <br/><br/>
+    <div class="homeBtn"><button class="btn btn-primary btn-md" id="homeBtn">Back</button></div>
+    <div class="helpBtn"><button class="btn btn-primary btn-md" id="helpBtn">Help</button></div>
+    <br/>
+    <!-- create the sliding div to show the game documentation -->
+
+
+    <div class="slider text-capitalize" id="slider">
+
+
+        <h5>Naija Flappy Bird Game</h5>
+        <h5>powered by emmysoft games studio</h5>
+        <h5>produced by adedoyin emmanuel</h5>
+        <h5>senior programmer: adedoyin emmanuel</h5>
+
+        <h5>game launch date 01|03|2022</h5>
+
+
+        <h5>special thanks to..</h5>
+        <h5>gameDevelopers studio.com, audio websites etc</h5>
+        <h5>more thanks to..</h5>
+        <h5>family and friends for motivation and support</h5>
+        <h5>for more info, call 07061620301 </h5>
+    </div>
+
+<script>
+    
+    //create a function to navigate home
+function navigatePage(url) {
+    location.href = url.toString();
+}
+
+
+//check if the home btn was clicked
+homeBtn.addEventListener("click", () => {
+    navigatePage("indexPage.html");
+});
+
+helpBtn.addEventListener("click", () => {
+    navigatePage("help.html");
+})
+
+</script>
+</body>
+<script src="sweetAlert2.min.js"></script>
+<script src="about.js"></script>
+
+</html>
